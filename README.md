@@ -26,7 +26,7 @@ When you're ready with the job creation, just schedule (start) the job once. Thi
 You'll need [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Vagrant](https://www.vagrantup.com/downloads.html) and [Chef Development Kit](http://downloads.getchef.com/chef-dk/) to be installed on your system. Additionally you need to install a few vagrant plugins:
 
 	$ vagrant plugin install vagrant-chef-zero
-    $ vargant plugin install vagrant-omnibus
+    $ vagrant plugin install vagrant-omnibus
     $ vagrant plugin install vagrant-berkshelf
 
 When you're ready with the preparation, you can fire up a chef server and a client using the following commands in the root of the repository:
