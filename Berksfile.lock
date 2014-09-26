@@ -1,0 +1,9 @@
+DEPENDENCIES
+  chef_handler (~> 1.1.6)
+  webinar
+    path: cookbooks/webinar
+
+GRAPH
+  chef_handler (1.1.6)
+  webinar (0.0.0)
+    chef_handler (>= 1.1.6)
