@@ -45,7 +45,9 @@ This command will:
 
 In case if you want to re-run chef-client, you only have to run:
 
-	$ vagrant provision
+	$ vagrant destroy -f && vagrant up
+
+(vagrant provision somehow does not work, it freezes the cookbook, so do the destroy && up)
     
 ### What should I see?
 
