@@ -13,6 +13,8 @@ For prepairing the jenkins environment, you have to do the following:
 4. Using the jenkins-cli create and enable the ChefSample job using the config.xml seed
 
 
+Create and enable the jobs by:
+
 	$ cd jenkins-config
 	$ java -jar PATH/TO/jenkins-cli.jar -s http://localhost:8080/ create-job ChefSample < config.xml
 	$ java -jar PATH/TO/jenkins-cli.jar -s http://localhost:8080/ enable-job ChefSample
