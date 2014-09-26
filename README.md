@@ -45,9 +45,7 @@ This command will:
 
 In case if you want to re-run chef-client, you only have to run:
 
-	$ vagrant destroy -f && vagrant up
-
-(vagrant provision somehow does not work, it freezes the cookbook, so do the destroy && up)
+	$ kill -9 $(lsof -i tcp:4000 | grep ruby | cut -d" " -f5) && vagrant provision
     
 ### What should I see?
 
