@@ -6,7 +6,7 @@ The purpose of this repository is the demonstration of the Chef Tracking Plugin 
 ### Jenkins preparation
 For prepairing the jenkins environment, you have to do the following:
 
-1. Download a latest jenkins from [jenkins-ci.org](jenkins-ci.org).
+1. Download a latest jenkins from [jenkins-ci.org](http://jenkins-ci.org).
 
 2. Install [Chef Tracking Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Chef+Tracking+Plugin)
 3. Install [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin) (required for the ChefSample job)
