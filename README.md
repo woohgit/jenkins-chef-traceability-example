@@ -13,11 +13,10 @@ For prepairing the jenkins environment, you have to do the following:
 4. Using the jenkins-cli create and enable the ChefSample job using the config.xml seed
 
 
-Create and enable the jobs by:
+Get the jenkins cli, create and enable the jobs by:
 
-	$ cd jenkins-config
-	$ java -jar PATH/TO/jenkins-cli.jar -s http://localhost:8080/ create-job ChefSample < config.xml
-	$ java -jar PATH/TO/jenkins-cli.jar -s http://localhost:8080/ enable-job ChefSample
+	$ ./get_cli.sh
+	$ ./create_jobs.sh
 
 When you're ready with the job creation, just schedule (start) the job once. This will create an artifact which is going to be used by our chef cookbook.
 
@@ -28,6 +27,7 @@ You'll need [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Vagrant](h
 	$ vagrant plugin install vagrant-chef-zero
     $ vagrant plugin install vagrant-omnibus
     $ vagrant plugin install vagrant-berkshelf
+    $ vagrant plugin install vagrant-triggers
 
 When you're ready with the preparation, you can fire up a chef server and a client using the following commands in the root of the repository:
 
@@ -45,7 +45,7 @@ This command will:
 
 In case if you want to re-run chef-client, you only have to run:
 
-	$ kill -9 $(lsof -i tcp:4000 | grep ruby | cut -d" " -f5) && vagrant provision
+	$ vagrant provision
     
 ### What should I see?
 

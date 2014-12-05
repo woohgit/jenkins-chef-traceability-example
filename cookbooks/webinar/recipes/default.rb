@@ -1,3 +1,7 @@
+package "make" do
+  action :nothing
+end.run_action(:install)
+
 chef_gem 'chef-handler-jenkins'
 
 require 'chef/handler/jenkins'
@@ -11,6 +15,8 @@ end
 	package p
 end
 
+# Add our jenkins installation as an endpoint
+# this is going to be a callback url
 chef_handler 'Chef::Handler::Jenkins' do
   source 'chef/handler/jenkins'
   arguments :url => 'http://10.0.2.2:8080'
@@ -26,6 +32,7 @@ file "/var/lib/tomcat7/webapps/traceability.war" do
 	action :delete
 end
 
+# Grab the traceability.war artifact from our lates jenkins build
 remote_file "/var/lib/tomcat7/webapps/traceability.war" do
   action :create
   owner "root"
