@@ -29,7 +29,7 @@ service "tomcat7" do
 end
 
 file "/var/lib/tomcat7/webapps/traceability.war" do
-	action :delete
+  action :delete
 end
 
 # Grab the traceability.war artifact from our lates jenkins build
